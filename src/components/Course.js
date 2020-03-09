@@ -23,7 +23,7 @@ const Course = () => {
         ]
 
       const partItems = parts.map((part) => 
-        <li>{part.name}</li>)
+        <li>{part.name} {part.exercises}</li>)
         
 
       return (
