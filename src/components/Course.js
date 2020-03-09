@@ -21,15 +21,24 @@ const Course = () => {
           id: 3
         }
         ]
-
+      
+        // Created function to iterate through array to retrieve various objects
       const partItems = parts.map((part) => 
         <li>{part.name} {part.exercises}</li>)
+
+        // Will use higher order function Reduce to summarize array objects
+      const total = parts.reduce(function(sum, part) {
+        return sum + part.exercises
+        console.log(total);
+      }, 0); // starting point of Sum 
         
 
       return (
         <React.Fragment>
           <h1>{name}</h1>
           <ul>{partItems}</ul>
+          <h3>Total of {total} exercises</h3>
+
         </React.Fragment>
        
       )
