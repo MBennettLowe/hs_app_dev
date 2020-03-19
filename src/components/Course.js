@@ -24,10 +24,8 @@ const Course = () => {
           name: "Redux",
           exercises: 11,
           id: 4
-        }
-       ]
-       },
-       {
+        },
+        {
           name: "Node.js",
           id: 2,
           parts: [
@@ -43,14 +41,15 @@ const Course = () => {
             }
           ]
         }
-      ]  
+      ]
+       
         // Created function to iterate through array to retrieve various objects
       const partItems = parts.map((part) => 
-        <li>{part.name} {part.exercises}</li>)
+        <li>{part.name} - number of exercises {part.exercises}</li>)
 
         // Will use higher order function Reduce to summarize array objects
       const total = parts.reduce(function(sum, part) {
-        return sum + part.exercises
+        return sum, part.exercises
         console.log(total);
       }, 0); // starting point of Sum 
         
@@ -64,7 +63,6 @@ const Course = () => {
         </React.Fragment>
        
       )
-    }
-    
+      } 
 
 export default Course;
